@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    
+    <script type="text/javascript">
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("sw.js");
+        }
+      </script>
+
+    
+</head>
+<body class="hidden">
+    
+    <header>
+        
+                <div class="logo">
+                    <img src="img/logo cer.png" alt="">
+                </div>
+                
+        <div class="textos">
+            <h1>Cerveceria del Sur</h1>
+            <h2>"Si para el amor no hay edad, para la CERVEZA no hay horario"</h2>
+        </div>
+        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+                <div class="icono" id="open">
+                    <span>&#9776;</span>
+                </div>
+        
+    </header>
+
+   
+
+
+    <main id="contenedor-productos">
+
+    </main>
+
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito-contenedor">
+                
+            </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+            <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+        </div>
+    </div>
+    
+            <p>Copyright © 2022 Cervecería del Sur Hecho por Antonio Lujano</p>
+     
+
+
+    <script defer src="stock.js"></script>
+    <script defer src="modal.js"></script>
+    <script defer src="app.js"></script>
+</body>
+</html>
